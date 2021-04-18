@@ -12,11 +12,12 @@ export const Logo = ({ alt }) => {
       }
     }
   `)
+  console.log(data.placeholderImage.fluid.src)
 
   return !data?.placeholderImage ? (
     <div>Imagem não encontrada</div>
   ) : (
-    <Img alt={alt} fluid={data.placeholderImage.childImageSharp.fluid} />
+    <img alt={alt} src={data.placeholderImage.fluid.src} />
   )
 }
 

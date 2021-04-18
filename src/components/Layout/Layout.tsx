@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Header, NavProps } from '../.'
+import { Header, NavProps } from '../.';
 
 interface LayoutProps extends NavProps{
   children: ReactNode

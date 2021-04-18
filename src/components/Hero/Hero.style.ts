@@ -9,31 +9,30 @@ const StyledHero = styled.div`
   align-items: center;
   text-align: center;
 
-  background: ${({ theme }) => theme.color.brand.black};
+  background: #000;
 
   padding: 0px 20px;
 
   .hero-text h1 {
-    font-family: ${({ theme }) => theme.typography.header.fontFace};
-    font-size: ${({ theme }) => `${theme.typography.header.size[1]}px`};
-    font-weight: ${({ theme }) => theme.typography.header.weight};
-    color: ${({ theme }) => theme.color.brand.white};
+    font-family: 'Roboto';
+    font-size: 22px;
+    font-weight: bold;
+    color: #f2f2f2;
 
     max-width: 300px;
   }
 
   .hero-text a {
-    background: ${({ theme }) => theme.color.brand.yellow};
-    border-radius: ${({ theme }) => `${theme.border[1]}px`};
+    background: #f9ca02;
+    border-radius: 4px;
 
     width: 175px;
     height: 40px;
     padding: 10px 32px;
 
-    color: ${({ theme }) => theme.color.brand.black};
-    font-size: ${({ theme }) =>
-      `${theme.typography.link.variant[1].size[0]}px`};
-    font-weight: ${({ theme }) => theme.typography.link.variant[1].weight};
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
   }
 
   @media only screen and (min-width: 1024px) {
@@ -47,13 +46,12 @@ const StyledHero = styled.div`
     text-align: left;
 
     .hero-text h1 {
-      font-size: ${({ theme }) => `${theme.typography.header.size[0]}px`};
+      font-size: 64px;
       max-width: 700px;
     }
 
     .hero-text a {
-      font-size: ${({ theme }) =>
-        `${theme.typography.link.variant[1].size[1]}px`};
+      font-size: 14px;
     }
   }
 `
