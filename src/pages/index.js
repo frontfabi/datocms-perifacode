@@ -3,13 +3,14 @@ import Container from "../components/container";
 import HeroPost from "../components/hero-post";
 import Intro from "../components/intro";
 import MoreStories from "../components/more-stories";
+import { Layout } from '../components'
 import { HelmetDatoCms } from "gatsby-source-datocms";
 import { graphql } from "gatsby";
 
 export default function Index({ data: { allPosts, site, blog } }) {
   const heroPost = allPosts.nodes[0];
   const morePosts = allPosts.nodes.slice(1);
-
+ 
   return (
     <Container>
       <HelmetDatoCms seo={blog.seo} favicon={site.favicon} />
@@ -39,6 +40,12 @@ export const query = graphql`
     blog: datoCmsBlog {
       seo: seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
+      }
+    }
+    navLinks: allDatoCmsPage {
+      nodes {
+        href
+        label
       }
     }
     allPosts: allDatoCmsPost(sort: { fields: date, order: DESC }, limit: 20) {
